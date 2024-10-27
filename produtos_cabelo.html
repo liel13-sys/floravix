@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floravix - Cabelo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Reutilize os estilos do seu CSS principal */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Mensagem de Boas-vindas */
+        .welcome-message {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1;
+        }
+
+        /* Header e Menu */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4a148c;
+            padding: 15px 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        header img {
+            width: 150px;
+            height: auto;
+            position: absolute;
+            right: 50px;
+            z-index: 0;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        nav a {
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 15px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #d4b8ff;
+        }
+
+        /* Seção de Produtos */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(25% - 20px);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-info h4 {
+            margin: 10px 0;
+        }
+        .product-info p {
+            color: #757575;
+            font-size: 14px;
+        }
+        .product-info .price {
+            color: #4a148c;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #4a148c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #311b92;
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4a148c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Botão de WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .whatsapp-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 20px);
+            }
+            header {
+                padding: 15px;
+                flex-direction: column;
+            }
+            nav {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: calc(100% - 20px);
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Frase de Boas-vindas -->
+    <div class="welcome-message">
+        <h1>Produtos para Cabelo</h1>
+    </div>
+
+    <!-- Cabeçalho com Logo e Menu -->
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+        <img src="img/logo.jpg" alt="Floravix - Saúde & Beleza Logo">
+    </header>
+
+    <!-- Seção de Produtos -->
+    <div class="container">
+        <h2>Produtos para Cabelos </h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="img/skincare1.jpg" alt="Produto Skincare 1">
+                <div class="product-info">
+                    <h4>Hidratante Facial</h4>
+                    <p>Hidratante com ingredientes naturais para uma pele macia e saudável.</p>
+                    <div class="price">R$ 59,90</div>
+                    <button class="btn">Comprar</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/skincare2.jpg" alt="Produto Skincare 2">
+                <div class="product-info">
+                    <h4>Serum Anti-Idade</h4>
+                    <p>Reduz linhas finas e sinais de envelhecimento para uma pele rejuvenescida.</p>
+                    <div class="price">R$ 120,00</div>
+                    <button class="btn">Comprar</button>
+                </div>
+            </div>
+            <!-- Adicione mais produtos aqui -->
+        </div>
+    </div>
+    
+    
+    <!-- Faixa Fixa do Carrinho -->
+<div class="cart-footer" id="cart-footer">
+    <span id="cart-count">0</span> produtos - Total: R$ <span id="cart-total">0,00</span>
+</div>
+
+<!-- Seção Detalhada do Carrinho -->
+<div class="cart-details" id="cart-details">
+    <h2>Seu Carrinho</h2>
+    <div class="cart-items" id="cart-items">
+        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+    </div>
+    <div class="cart-summary">
+        <p>Total: R$ <span id="cart-summary-total">0,00</span></p>
+        <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+    <button class="close-cart" id="close-cart">&times;</button>
+</div>
+    
+
+    <!-- Botão de WhatsApp -->
+    <a href="https://wa.me/55XXXXXXXXXX" class="whatsapp-button" target="_blank" title="Fale conosco pelo WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Floravix - Saúde & Beleza &copy; 2024</p>
+    </footer>
+<script src="js/cart.js"></script>
+</body>
+</html>
